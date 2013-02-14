@@ -1,0 +1,9 @@
+package ar.com.magm.web.primefaces;
+
+import java.io.Serializable;
+
+public class VentasBean implements Serializable {
+
+	private static final long serialVersionUID = -6690574219803425728L;
+
+}

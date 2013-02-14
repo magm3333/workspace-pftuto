@@ -1,0 +1,58 @@
+package ar.com.magm.web.primefaces;
+
+import java.io.Serializable;
+
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
+import javax.faces.event.ActionEvent;
+
+import org.primefaces.context.RequestContext;
+
+public class LoginBean implements Serializable {
+
+	private static final long serialVersionUID = -2152389656664659476L;
+
+	private String nombre;
+
+	private String clave;
+	private boolean loggedIn = false;
+
+	public boolean isLoggedIn() {
+		return loggedIn;
+	}
+
+	public String getUsername() {
+		return nombre;
+	}
+
+	public void setUsername(String username) {
+		this.nombre = username;
+	}
+
+	public String getPassword() {
+		return clave;
+	}
+
+	public void setPassword(String password) {
+		this.clave = password;
+	}
+
+	public void login(ActionEvent actionEvent) {
+		RequestContext context = RequestContext.getCurrentInstance();
+		FacesMessage msg = null;
+		if (nombre != null && nombre.equals("admin") && clave != null
+				&& clave.equals("admin")) {
+			loggedIn = true;
+			msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Bienvenid@",
+					nombre);
+		} else {
+			loggedIn = false;
+			msg = new FacesMessage(FacesMessage.SEVERITY_WARN, "Login Error",
+					"Credenciales no válidas");
+		}
+
+		FacesContext.getCurrentInstance().addMessage(null, msg);
+		context.addCallbackParam("loggedIn", loggedIn);
+		context.addCallbackParam("view", "gauge.xhtml");
+	}
+}

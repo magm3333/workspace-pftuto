@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+<h:body>
+	<h:form>
+		<p:panel header="Login" style="width:300px">
+			<h:panelGrid columns="2" cellpadding="5">
+				<h:outputLabel for="username" value="Usuario:" />
+				<p:inputText value="#{loginBean.nombre}" id="username"
+					required="true" label="username" />
+
+				<h:outputLabel for="password" value="Clave:" />
+				<p:password value="#{loginBean.clave}" id="password" required="true"
+					label="password" />
+
+				<f:facet name="footer">
+					<p:commandButton id="loginButton" value="Login"
+						actionListener="#{loginBean.login}"
+						oncomplete="manejarLogin(xhr, status, args)" />
+				</f:facet>
+			</h:panelGrid>
+		</p:panel>
+	</h:form>
+
+</h:body>
+
+	<script type="text/javascript">
+		//<![CDATA[
+		function manejarLogin(xhr, status, args) {
+			if (!args.validationFailed && args.estaLogeado) {
+				setTimeout(function() {
+					window.location = args.view;;
+				}, 500);
+			}
+		}
+		//]]>
+	</script>
+</html>

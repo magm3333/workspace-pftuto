@@ -1,0 +1,7 @@
+package ar.com.magm.web.primefaces;
+
+import java.io.Serializable;
+
+public class GaugeBean implements Serializable {
+
+}

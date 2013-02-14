@@ -1,0 +1,40 @@
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+</h:head>
+<h:body>
+	<p:growl id="growl" showDetail="true" life="3000" />
+	<h:form>
+
+		<h:panelGrid columns="2" cellpadding="5">
+			<h:outputLabel for="username" value="Username:" />
+			<p:inputText value="#{loginBean.username}" id="username"
+				required="true" label="username" />
+
+			<h:outputLabel for="password" value="Password:" />
+			<h:inputSecret value="#{loginBean.password}" id="password"
+				required="true" label="password" />
+
+			<f:facet name="footer">
+				<p:commandButton id="loginButton" value="Login" update=":growl"
+					actionListener="#{loginBean.login}"
+					oncomplete="handleLoginRequest(xhr, status, args)" />
+			</f:facet>
+		</h:panelGrid>
+
+	</h:form>
+</h:body>
+
+<script type="text/javascript">
+	function handleLoginRequest(xhr, status, args) {
+		if (args.validationFailed || !args.loggedIn) {
+
+		} else {
+		}
+
+		window.location = args.view;
+	}}
+</script>
+</html>

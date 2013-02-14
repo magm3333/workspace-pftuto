@@ -1,0 +1,34 @@
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+<p:commandLink id="logout" actionListener="#{loginBean.logout}"
+	style="margin-right:20px;" oncomplete="logout(xhr, status, args)">
+	<h:outputText value="logout" />
+</p:commandLink>
+<h:body>
+	<h:form id="formGauge">
+		<p:poll interval="2" update="gauge" />
+
+		<p:meterGaugeChart id="gauge" value="#{gaugeBean.meterGaugeModel}"
+			showTickLabels="false" labelHeightAdjust="110"
+			intervalOuterRadius="130"
+			seriesColors="66cc66, 93b75f, E7E658, cc6666"
+			style="width:400px;height:250px" title="Gauge Personalizado"
+			label="km/h" />
+	</h:form>
+</h:body>
+<script type="text/javascript">
+	//<![CDATA[
+	function logout(xhr, status, args) {
+		return;
+		if (args.view) {
+			setTimeout(function() {
+				window.location = args.view;
+			}, 1000);
+		}
+	}
+	//]]>
+</script>
+</html>

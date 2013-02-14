@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.jst.jsf.ui.jsfFacetInstall">
+		<item value="/WEB-INF/faces-config.xml" key="configPath"/>
+		<item value="javax.faces.webapp.FacesServlet" key="servletClassname"/>
+		<item value="Faces Servlet" key="servletName"/>
+		<item value="true" key="configureServlet"/>
+		<section name="urlMappings">
+			<list key="pattern">
+				<item value="/faces/*"/>
+				<item value="*.xhtml"/>
+			</list>
+		</section>
+	</section>
+</section>
