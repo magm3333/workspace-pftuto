@@ -1,0 +1,52 @@
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+<h:body style="text-align:center">
+	<h:form>
+
+		<p:dataTable id="tablaDeDatos" var="venta"
+			value="#{ventasBean.ventas}" widgetVar="tablaDeVentas"
+			emptyMessage="No hay ventas con este critrio de filtrado"
+			filteredValue="#{ventasBean.ventasFiltradas}" paginator="true"
+			rows="10">
+
+			<f:facet name="header">
+				<p:outputPanel>
+					<h:outputText value="Buscar en todos:" />
+					<p:inputText id="globalFilter" onkeyup="tablaDeVentas.filter()"
+						style="width:150px" />
+				</p:outputPanel>
+			</f:facet>
+
+			<p:column id="zonaCol" filterBy="#{venta.zona}" headerText="Zona"
+				filterMatchMode="exact" filterOptions="#{ventasBean.zonasOptions}">
+				<h:outputText value="#{venta.zona}" />
+			</p:column>
+
+			<p:column id="clienteCol" filterBy="#{venta.cliente}"
+				headerText="Cliente" filterMatchMode="startsWith">
+				<h:outputText value="#{venta.cliente}" />
+			</p:column>
+
+			<p:column id="anioCol" filterBy="#{venta.anio}" headerText="Año"
+				filterMatchMode="startsWith">
+				<h:outputText value="#{venta.anio}" />
+			</p:column>
+			
+			<p:column id="mesCol" filterBy="#{venta.mesLetra}" headerText="Mes"
+				filterMatchMode="exact" filterOptions="#{ventasBean.mesesOptions}">
+				<h:outputText value="#{venta.mesLetra}" />
+			</p:column>
+			
+			<p:column id="ventasCol" filterBy="#{venta.venta}" headerText="Importe Venta">
+			</p:column>
+			
+		</p:dataTable>
+
+	</h:form>
+
+</h:body>
+</html>

@@ -1,0 +1,56 @@
+package ar.com.magm.web.primefaces;
+
+import java.io.Serializable;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.faces.context.FacesContext;
+import javax.servlet.ServletContext;
+
+import ar.com.magm.model.Venta;
+
+public class VentasBean implements Serializable {
+
+	private static final long serialVersionUID = -6690574219803425728L;
+
+	private String sql = "SELECT zona, cliente, year(fecha) as anio, month(fecha) as mes, sum(importe*cantidad) as ventas FROM dw_ventasfact v INNER JOIN clientes c ON v.idCliente=c.idCliente INNER JOIN zonas z ON z.idZona=c.idZona GROUP BY zona, cliente, anio, mes ORDER BY anio,mes,zona";
+
+	private List<Venta> ventas;
+
+	public List<Venta> getVentas() {
+
+		processList(null);
+
+		return ventas;
+	}
+
+	private void processList(Object args[]) {
+		ventas = new ArrayList<Venta>();
+		ServletContext sc = (ServletContext) FacesContext.getCurrentInstance()
+				.getExternalContext().getContext();
+		Connection cn = (Connection) sc.getAttribute("datasource");
+		try {
+			PreparedStatement pst = cn.prepareStatement(sql);
+			if (args != null) {
+				for (int t = 0; t < args.length; t++) {
+					pst.setObject(t + 1, args[t]);
+				}
+			}
+			ResultSet rs = pst.executeQuery();
+			while (rs.next()) {
+				Venta venta = new Venta(rs.getString("zona"),
+						rs.getString("cliente"), rs.getInt("anio"),
+						rs.getInt("mes"), rs.getDouble("ventas"));
+				ventas.add(venta);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

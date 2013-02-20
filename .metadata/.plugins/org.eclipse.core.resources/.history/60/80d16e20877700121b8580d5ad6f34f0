@@ -1,0 +1,47 @@
+package ar.com.magm.model;
+
+import java.io.Serializable;
+
+public class Venta implements Serializable {
+
+	private static final long serialVersionUID = 8060348552656940209L;
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public String getZona() {
+		return zona;
+	}
+
+	public String getCliente() {
+		return cliente;
+	}
+
+	public int getAño() {
+		return año;
+	}
+
+	public int getMes() {
+		return mes;
+	}
+
+	public double getVenta() {
+		return venta;
+	}
+
+	public Venta(String zona, String cliente, int año, int mes, double venta) {
+		super();
+		this.zona = zona;
+		this.cliente = cliente;
+		this.año = año;
+		this.mes = mes;
+		this.venta = venta;
+	}
+
+	private String zona;
+	private String cliente;
+	private int año;
+	private int mes;
+	private double venta;
+}

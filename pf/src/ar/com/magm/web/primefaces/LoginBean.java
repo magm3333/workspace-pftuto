@@ -55,7 +55,7 @@ public class LoginBean implements Serializable {
 		FacesContext.getCurrentInstance().addMessage(null, msg);
 		context.addCallbackParam("estaLogeado", logeado);
 		if (logeado)
-			context.addCallbackParam("view", "gauge.xhtml");
+			context.addCallbackParam("view", "ventas.xhtml");
 	}
 
 	public void logout() {

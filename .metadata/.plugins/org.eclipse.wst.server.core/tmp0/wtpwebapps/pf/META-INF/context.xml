@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context>
-	<Resource auth="Container" description="Sakila DB Connection" name="jdbc/practico"
+	<Resource auth="Container" description="DB Practico" name="jdbc/practico"
 		type="javax.sql.DataSource" password="root" driverClassName="com.mysql.jdbc.Driver"
 		maxIdle="2" maxWait="5000" validationQuery="select 1"
 		username="root" url="jdbc:mysql://localhost:3306/practico" maxActive="4" />
