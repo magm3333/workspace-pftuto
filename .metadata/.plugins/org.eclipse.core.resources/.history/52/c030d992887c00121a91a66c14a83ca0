@@ -3,7 +3,12 @@
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
 </h:head>
+
 <h:body>
+	<p:commandLink id="logout" actionListener="#{loginBean.logout}"
+		style="margin-right:20px;" oncomplete="logout(xhr, status, args)">
+		<h:outputText value="logout" />
+	</p:commandLink>
 	<h:form id="formGauge">
 		<p:poll interval="2" update="gauge" />
 
@@ -15,4 +20,15 @@
 			label="km/h" />
 	</h:form>
 </h:body>
+<script type="text/javascript">
+	//<![CDATA[
+	function logout(xhr, status, args) {
+
+		setTimeout(function() {
+			window.location = 'login.xhtml';
+		}, 500);
+
+	}
+	//]]>
+</script>
 </html>

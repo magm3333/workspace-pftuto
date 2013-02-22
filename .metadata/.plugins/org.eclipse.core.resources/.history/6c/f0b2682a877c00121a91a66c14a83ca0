@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+<h:body>
+<p:layout fullPage="true">  
+    <p:layoutUnit position="center">  
+        <iframe id="frame" src="ventas.xhtml" style="width:100%; height: 100%; text-align: center;" seamless='seamless'/> 
+    </p:layoutUnit>  
+  
+</p:layout>  
+
+<p:dock>  
+    <p:menuitem value="Ventas" icon="/images/dock/home.png" url="javascript:cambioPagina('ventas.xhtml')"/>  
+    <p:menuitem value="Gauge" icon="/images/dock/music.png" url="javascript:cambioPagina('gauge.xhtml')"/>  
+    <p:menuitem value="Logout" icon="/images/dock/video.png" url="javascript:cambioPagina('ventas.xhtml')"/>  
+</p:dock>  
+</h:body>
+<script type="text/javascript">
+	//<![CDATA[
+	var actual='ventas.xhtml';
+	function cambioPagina(pagina) {
+		if (pagina!=actual){
+			$('#frame').attr('src',pagina);
+		}
+	}
+	//]]>
+</script>
+</html>
