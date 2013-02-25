@@ -11,6 +11,7 @@ import java.util.List;
 import javax.faces.context.FacesContext;
 import javax.faces.model.SelectItem;
 import javax.servlet.ServletContext;
+import javax.servlet.http.HttpSession;
 
 import ar.com.magm.model.Venta;
 
@@ -22,13 +23,14 @@ public class VentasBean implements Serializable {
 			"Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
 			"Octubre", "Noviembre", "Diciembre" };
 
-	private String sql = "SELECT year(fecha) as anio, month(fecha) as mes, zona, cliente, sum(importe*cantidad) as ventas FROM dw_ventasfact v INNER JOIN clientes c ON v.idCliente=c.idCliente INNER JOIN zonas z ON z.idZona=c.idZona GROUP BY zona, cliente, anio, mes ORDER BY anio,mes,zona,cliente";
+	private String sql = "SELECT year(fecha) as anio, month(fecha) as mes, zona, cliente, sum(importe*cantidad) as ventas FROM dw_ventasfact v INNER JOIN clientes c ON v.idCliente=c.idCliente INNER JOIN zonas z ON z.idZona=c.idZona WHERE cliente like ? GROUP BY zona, cliente, anio, mes ORDER BY anio,mes,zona,cliente";
 	private List<Venta> ventas;
 	private List<Venta> ventasFiltradas;
 	private List<String> zonas;
+	
 
 	public VentasBean() {
-		processList(null);
+		//processList(null);
 	}
 
 	public SelectItem[] getMesesOptions() {
@@ -40,6 +42,17 @@ public class VentasBean implements Serializable {
 	}
 
 	public List<Venta> getVentas() {
+		if(ventas==null){
+			HttpSession session = (HttpSession) FacesContext.getCurrentInstance()
+					.getExternalContext().getSession(false);
+			LoginBean loginBean = (LoginBean) session.getAttribute(
+					"loginBean");
+			String parametroNombre=loginBean.getNombre();
+			if(parametroNombre.equals("admin")){
+				parametroNombre="%";
+			}
+			processList(new String[]{parametroNombre});
+		}
 		return ventas;
 	}
 

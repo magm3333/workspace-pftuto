@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;name&apos; in &apos;ar.com.magm.web.primefaces.VentasBean.getVentas()&apos; to &apos;parametroNombre&apos;&#x0A;- Original project: &apos;pf&apos;&#x0A;- Original element: &apos;ar.com.magm.web.primefaces.VentasBean.getVentas().name&apos;&#x0A;- Renamed element: &apos;name&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;name&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;ar.com.magm.web.primefaces{VentasBean.java[VentasBean~getVentas@name!1646!1679!1653!1656!QString;!0!false" name="parametroNombre" references="true" stamp="1361793753070" version="1.0"/>
+</session>
