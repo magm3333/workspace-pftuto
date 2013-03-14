@@ -29,7 +29,7 @@ public class VentasBean implements Serializable {
 	private List<String> zonas;
 	
 
-	public VentasBean() {
+	public VentasBean() { 
 		//processList(null);
 	}
 
