@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+org.springframework.ide.eclipse.core.builders.enable.aopreferencemodelbuilder=true
+org.springframework.ide.eclipse.core.builders.enable.beanmetadatabuilder=true
+org.springframework.ide.eclipse.core.builders.enable.osgibundleupdater=false
+org.springframework.ide.eclipse.core.enable.project.preferences=false
+org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.bestpractices.com.springsource.sts.bestpractices.AvoidDriverManagerDataSource-org.springframework.ide.eclipse.bestpractices.beansvalidator=false
+org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.bestpractices.com.springsource.sts.bestpractices.ImportElementsAtTopRulee-org.springframework.ide.eclipse.bestpractices.beansvalidator=false
+org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.bestpractices.com.springsource.sts.bestpractices.ParentBeanSpecifiesAbstractClassRule-org.springframework.ide.eclipse.bestpractices.beansvalidator=false
+org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.bestpractices.com.springsource.sts.bestpractices.RefElementRule-org.springframework.ide.eclipse.bestpractices.beansvalidator=false
+org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.bestpractices.com.springsource.sts.bestpractices.TooManyBeansInFileRule-org.springframework.ide.eclipse.bestpractices.beansvalidator=false
+org.springframework.ide.eclipse.core.validator.rule.enable.org.springframework.ide.eclipse.bestpractices.com.springsource.sts.bestpractices.UseBeanInheritance-org.springframework.ide.eclipse.bestpractices.beansvalidator=false
