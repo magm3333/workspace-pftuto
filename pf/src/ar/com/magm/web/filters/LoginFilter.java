@@ -2,6 +2,7 @@ package ar.com.magm.web.filters;
 
 import java.io.IOException;
 
+import javax.faces.context.FacesContext;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -30,6 +31,7 @@ public class LoginFilter implements Filter {
 		String urlStr = req.getRequestURL().toString().toLowerCase();
 		boolean noProteger = noProteger(urlStr);
 		System.out.println(urlStr + " - desprotegido=[" + noProteger + "]");
+
 		
 		//Si no requiere protección continúo normalmente.
 		if (noProteger(urlStr)) {

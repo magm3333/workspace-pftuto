@@ -35,6 +35,16 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>WebContent/WEB-INF/lib/commons-logging-1.1.1.jar</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/devTools/librerias/commons-logging-1.1.1.jar</locationURI>
+		</link>
+		<link>
+			<name>WebContent/WEB-INF/lib/javax.faces-2.1.17.jar</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/devTools/jsf_and_primefaces/javax.faces-2.1.17.jar</locationURI>
+		</link>
+		<link>
 			<name>WebContent/WEB-INF/lib/mysql-connector-java-5.1.17.jar</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/devTools/apache-tomcat-6.0.33/lib/mysql-connector-java-5.1.17.jar</locationURI>
@@ -43,6 +53,61 @@
 			<name>WebContent/WEB-INF/lib/primefaces-3.5.jar</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/devTools/jsf_and_primefaces/primefaces-3.5.jar</locationURI>
+		</link>
+		<link>
+			<name>WebContent/WEB-INF/lib/spring-beans-3.2.1.RELEASE.jar</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/devTools/librerias/spring-framework-3.2.1.RELEASE/libs/spring-beans-3.2.1.RELEASE.jar</locationURI>
+		</link>
+		<link>
+			<name>WebContent/WEB-INF/lib/spring-context-3.2.1.RELEASE.jar</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/devTools/librerias/spring-framework-3.2.1.RELEASE/libs/spring-context-3.2.1.RELEASE.jar</locationURI>
+		</link>
+		<link>
+			<name>WebContent/WEB-INF/lib/spring-context-support-3.2.1.RELEASE.jar</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/devTools/librerias/spring-framework-3.2.1.RELEASE/libs/spring-context-support-3.2.1.RELEASE.jar</locationURI>
+		</link>
+		<link>
+			<name>WebContent/WEB-INF/lib/spring-core-3.2.1.RELEASE.jar</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/devTools/librerias/spring-framework-3.2.1.RELEASE/libs/spring-core-3.2.1.RELEASE.jar</locationURI>
+		</link>
+		<link>
+			<name>WebContent/WEB-INF/lib/spring-expression-3.2.1.RELEASE.jar</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/devTools/librerias/spring-framework-3.2.1.RELEASE/libs/spring-expression-3.2.1.RELEASE.jar</locationURI>
+		</link>
+		<link>
+			<name>WebContent/WEB-INF/lib/spring-instrument-3.2.1.RELEASE.jar</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/devTools/librerias/spring-framework-3.2.1.RELEASE/libs/spring-instrument-3.2.1.RELEASE.jar</locationURI>
+		</link>
+		<link>
+			<name>WebContent/WEB-INF/lib/spring-instrument-tomcat-3.2.1.RELEASE.jar</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/devTools/librerias/spring-framework-3.2.1.RELEASE/libs/spring-instrument-tomcat-3.2.1.RELEASE.jar</locationURI>
+		</link>
+		<link>
+			<name>WebContent/WEB-INF/lib/spring-jdbc-3.2.1.RELEASE.jar</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/devTools/librerias/spring-framework-3.2.1.RELEASE/libs/spring-jdbc-3.2.1.RELEASE.jar</locationURI>
+		</link>
+		<link>
+			<name>WebContent/WEB-INF/lib/spring-tx-3.2.1.RELEASE.jar</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/devTools/librerias/spring-framework-3.2.1.RELEASE/libs/spring-tx-3.2.1.RELEASE.jar</locationURI>
+		</link>
+		<link>
+			<name>WebContent/WEB-INF/lib/spring-web-3.2.1.RELEASE.jar</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/devTools/librerias/spring-framework-3.2.1.RELEASE/libs/spring-web-3.2.1.RELEASE.jar</locationURI>
+		</link>
+		<link>
+			<name>WebContent/WEB-INF/lib/spring-webmvc-3.2.1.RELEASE.jar</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/devTools/librerias/spring-framework-3.2.1.RELEASE/libs/spring-webmvc-3.2.1.RELEASE.jar</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
