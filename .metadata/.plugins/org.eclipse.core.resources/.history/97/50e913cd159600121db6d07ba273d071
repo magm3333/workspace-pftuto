@@ -1,0 +1,15 @@
+lbl.login=Login
+lbl.username=User
+lbl.password=Password
+
+lbl.ventas=Sales
+lbl.gauge=Gauge
+lbl.logout=Logout
+
+lbl.table.sales.empty=There are no sales for this filter criteria
+lbl.find.all=Find all
+lbl.col.zone=Zone
+lbl.col.customer=Customer
+lbl.col.year=Year
+lbl.col.month=Month
+lbl.col.salesamount=Sales amount

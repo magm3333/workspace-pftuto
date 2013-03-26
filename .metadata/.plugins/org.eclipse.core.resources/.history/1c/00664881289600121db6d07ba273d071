@@ -1,0 +1,21 @@
+lbl.login=Ingreso
+lbl.username=Usuario
+lbl.password=Clave
+lbl.welcome=Bienvenid@
+lbl.error.login=Error en el ingreso
+lbl.invalidcredentials=Credenciales inválidas
+
+lbl.ventas=Ventas
+lbl.gauge=Tacómetro
+lbl.logout=Salir
+lbl.all.m=Todos
+lbl.all.f=Todas
+lbl.months=Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre
+
+lbl.table.sales.empty=No hay ventas con este criterio de filtrado
+lbl.find.all=Buscar en todos
+lbl.col.zone=Zona
+lbl.col.customer=Cliente
+lbl.col.year=Año
+lbl.col.month=Mes
+lbl.col.salesamount=Importe Ventas

@@ -15,11 +15,11 @@
 	</p:layout>
 	<h:form id="form">
 		<p:dock>
-			<p:menuitem value="Ventas" icon="/images/ventas.png"
+			<p:menuitem value="#{msg['lbl.ventas']}" icon="/images/ventas.png"
 				url="javascript:cambioPagina('ventas.xhtml')" />
-			<p:menuitem value="Gauge" icon="/images/gauge.jpg"
+			<p:menuitem value="#{msg['lbl.gauge']}" icon="/images/gauge.jpg"
 				url="javascript:cambioPagina('gauge.xhtml')" />
-			<p:menuitem value="Logout" icon="/images/logout.png"
+			<p:menuitem value="#{msg['lbl.logout']}" icon="/images/logout.png"
 				actionListener="#{loginBean.logout}"
 				oncomplete="logout(xhr, status, args)" />
 		</p:dock>

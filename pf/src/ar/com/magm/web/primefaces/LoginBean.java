@@ -1,6 +1,7 @@
 package ar.com.magm.web.primefaces;
 
 import java.io.Serializable;
+import java.util.ResourceBundle;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
@@ -61,16 +62,20 @@ public class LoginBean implements Serializable {
 
 	public void login(ActionEvent actionEvent) {
 		RequestContext context = RequestContext.getCurrentInstance();
+		
 
+		FacesContext jsfCtx= FacesContext.getCurrentInstance();
+		ResourceBundle bundle = jsfCtx.getApplication().getResourceBundle(jsfCtx, "msg");
+		
 		FacesMessage msg = null;
 		if (usuarioValido(nombre, clave)) {
 			logeado = true;
-			msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Bienvenid@",
+			msg = new FacesMessage(FacesMessage.SEVERITY_INFO, bundle.getString("lbl.welcome"),
 					nombre);
 		} else {
 			logeado = false;
-			msg = new FacesMessage(FacesMessage.SEVERITY_WARN, "Login Error",
-					"Credenciales no válidas");
+			msg = new FacesMessage(FacesMessage.SEVERITY_WARN, bundle.getString("lbl.error.login"),
+					bundle.getString("lbl.invalidcredentials"));
 		}
 
 		FacesContext.getCurrentInstance().addMessage(null, msg);

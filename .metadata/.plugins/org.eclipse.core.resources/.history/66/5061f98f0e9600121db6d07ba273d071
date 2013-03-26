@@ -1,0 +1,14 @@
+lbl.login=Ingreso
+lbl.username=Usuario
+lbl.password=Clave
+
+lbl.ventas=Ventas
+lbl.gauge=Tacómetro
+lbl.logout=Salir
+
+lbl.table.sales.empty=No hay ventas con este criterio de filtrado
+lbl.find.all=Buscar en todos
+lbl.col.zone=Zona
+lbl.col.customer=Cliente
+lbl.col.year=Año
+

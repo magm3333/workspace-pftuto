@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 
 import javax.faces.context.FacesContext;
 import javax.faces.model.SelectItem;
@@ -19,39 +20,42 @@ public class VentasBean implements Serializable {
 
 	private static final long serialVersionUID = -6690574219803425728L;
 
-	private String[] meses = new String[] { "Enero", "Febrero", "Marzo",
-			"Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
-			"Octubre", "Noviembre", "Diciembre" };
+	private String[] meses ;
 
 	private String sql = "SELECT year(fecha) as anio, month(fecha) as mes, zona, cliente, sum(importe*cantidad) as ventas FROM dw_ventasfact v INNER JOIN clientes c ON v.idCliente=c.idCliente INNER JOIN zonas z ON z.idZona=c.idZona WHERE cliente like ? GROUP BY zona, cliente, anio, mes ORDER BY anio,mes,zona,cliente";
 	private List<Venta> ventas;
 	private List<Venta> ventasFiltradas;
 	private List<String> zonas;
-	
+	private FacesContext jsfCtx;
+	private ResourceBundle bundle;
 
-	public VentasBean() { 
-		//processList(null);
+	public VentasBean() {
+		jsfCtx = FacesContext.getCurrentInstance();
+		bundle = jsfCtx.getApplication().getResourceBundle(jsfCtx, "msg");
+		
+		// processList(null);
 	}
 
 	public SelectItem[] getMesesOptions() {
+		meses=bundle.getString("lbl.months").split(",");
 		SelectItem[] r = new SelectItem[13];
-		r[0] = new SelectItem("", "Todos");
+		r[0] = new SelectItem("", bundle.getString("lbl.all.m"));
 		for (int t = 0; t < meses.length; t++)
 			r[t + 1] = new SelectItem(meses[t], meses[t]);
 		return r;
 	}
 
 	public List<Venta> getVentas() {
-		if(ventas==null){
-			HttpSession session = (HttpSession) FacesContext.getCurrentInstance()
-					.getExternalContext().getSession(false);
-			LoginBean loginBean = (LoginBean) session.getAttribute(
-					"loginBean");
-			String parametroNombre=loginBean.getNombre();
-			if(parametroNombre.equals("admin")){
-				parametroNombre="%";
+		if (ventas == null) {
+			HttpSession session = (HttpSession) FacesContext
+					.getCurrentInstance().getExternalContext()
+					.getSession(false);
+			LoginBean loginBean = (LoginBean) session.getAttribute("loginBean");
+			String parametroNombre = loginBean.getNombre();
+			if (parametroNombre.equals("admin")) {
+				parametroNombre = "%";
 			}
-			processList(new String[]{parametroNombre});
+			processList(new String[] { parametroNombre });
 		}
 		return ventas;
 	}
@@ -62,13 +66,14 @@ public class VentasBean implements Serializable {
 
 	public SelectItem[] getZonasOptions() {
 		SelectItem[] r = new SelectItem[zonas.size() + 1];
-		r[0] = new SelectItem("", "Todas");
+		r[0] = new SelectItem("", bundle.getString("lbl.all.f"));
 		for (int t = 0; t < zonas.size(); t++)
 			r[t + 1] = new SelectItem(zonas.get(t), zonas.get(t));
 		return r;
 	}
 
 	private void processList(Object args[]) {
+		meses=bundle.getString("lbl.months").split(",");
 		ventas = new ArrayList<Venta>();
 		zonas = new ArrayList<String>();
 		ServletContext sc = (ServletContext) FacesContext.getCurrentInstance()

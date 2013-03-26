@@ -7,18 +7,18 @@
 <h:body style="text-align:center">
 	<p:growl id="mensajes" showDetail="true" life="2000" />
 	<h:form>
-		<p:panel header="Login" style="width:300px">
+		<p:panel header="#{msg['lbl.login']}" style="width:300px">
 			<h:panelGrid columns="2" cellpadding="5">
-				<h:outputLabel for="username" value="Usuario:" />
+				<h:outputLabel for="username" value="#{msg['lbl.username']}:" />
 				<p:inputText value="#{loginBean.nombre}" id="username"
 					required="true" label="username" />
 
-				<h:outputLabel for="password" value="Clave:" />
+				<h:outputLabel for="password" value="#{msg['lbl.password']}:" />
 				<p:password value="#{loginBean.clave}" id="password" required="true"
 					label="password" />
 
 				<f:facet name="footer">
-					<p:commandButton id="loginButton" value="Login"
+					<p:commandButton id="loginButton" value="#{msg['lbl.login']}"
 						actionListener="#{loginBean.login}" update=":mensajes"
 						oncomplete="manejarLogin(xhr, status, args)" />
 				</f:facet>
@@ -28,15 +28,15 @@
 
 </h:body>
 
-	<script type="text/javascript">
-		//<![CDATA[
-		function manejarLogin(xhr, status, args) {
-			if (!args.validationFailed && args.estaLogeado) {
-				setTimeout(function() {
-					window.location = args.view;;
-				}, 1000);
-			}
+<script type="text/javascript">
+	//<![CDATA[
+	function manejarLogin(xhr, status, args) {
+		if (!args.validationFailed && args.estaLogeado) {
+			setTimeout(function() {
+				window.location = args.view;
+			}, 1000);
 		}
-		//]]>
-	</script>
+	}
+	//]]>
+</script>
 </html>

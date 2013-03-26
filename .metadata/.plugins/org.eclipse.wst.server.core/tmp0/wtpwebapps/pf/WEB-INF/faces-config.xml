@@ -6,22 +6,21 @@
 	version="2.1">
 	<application>
 		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+
+		<locale-config>
+			<default-locale>es</default-locale>
+			<supported-locale>en</supported-locale>
+		</locale-config>
+		<resource-bundle>
+			<base-name>ar.com.magm.recursos.mensajes</base-name>
+			<var>msg</var>
+		</resource-bundle>
+
 	</application>
-	<!--  
-	<managed-bean>
-		<managed-bean-name>gaugeBean</managed-bean-name>
-		<managed-bean-class>ar.com.magm.web.primefaces.GaugeBean</managed-bean-class>
-		<managed-bean-scope>application</managed-bean-scope>
-	</managed-bean>
-	<managed-bean>
-		<managed-bean-name>ventasBean</managed-bean-name>
-		<managed-bean-class>ar.com.magm.web.primefaces.VentasBean</managed-bean-class>
-		<managed-bean-scope>session</managed-bean-scope>
-	</managed-bean>
-	<managed-bean>
-		<managed-bean-name>loginBean</managed-bean-name>
-		<managed-bean-class>ar.com.magm.web.primefaces.LoginBean</managed-bean-class>
-		<managed-bean-scope>session</managed-bean-scope>
-	</managed-bean>
--->
+	<!-- <managed-bean> <managed-bean-name>gaugeBean</managed-bean-name> <managed-bean-class>ar.com.magm.web.primefaces.GaugeBean</managed-bean-class> 
+		<managed-bean-scope>application</managed-bean-scope> </managed-bean> <managed-bean> 
+		<managed-bean-name>ventasBean</managed-bean-name> <managed-bean-class>ar.com.magm.web.primefaces.VentasBean</managed-bean-class> 
+		<managed-bean-scope>session</managed-bean-scope> </managed-bean> <managed-bean> 
+		<managed-bean-name>loginBean</managed-bean-name> <managed-bean-class>ar.com.magm.web.primefaces.LoginBean</managed-bean-class> 
+		<managed-bean-scope>session</managed-bean-scope> </managed-bean> -->
 </faces-config>
