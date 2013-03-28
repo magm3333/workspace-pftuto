@@ -1,0 +1,23 @@
+package ar.com.magm.model;
+
+public class Zona {
+	private int idZona;
+
+	public int getIdZona() {
+		return idZona;
+	}
+
+	public void setIdZona(int idZona) {
+		this.idZona = idZona;
+	}
+
+	public String getZona() {
+		return zona;
+	}
+
+	public void setZona(String zona) {
+		this.zona = zona;
+	}
+
+	private String zona;
+}
