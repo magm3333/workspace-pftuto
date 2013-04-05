@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+          http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	
+	<!--Permite usar entre otras la anotación @Autowired -->
+    <context:annotation-config/>
+    <context:component-scan base-package="ar.com.magm.beans.dao.controller"/>
+    
+    <bean class="ar.com.magm.persistencia.hibernate.util.HibernateUtil" factory-method="getSessionFactory"  />
+	<bean class="ar.com.magm.beans.dao.hibernateimpl.ClienteDAOImplHibernate" />
+	<bean class="ar.com.magm.beans.dao.hibernateimpl.ZonaDAOImplHibernate" />
+	
+	
+	<bean id="gaugeBean" class="ar.com.magm.web.primefaces.GaugeBean" scope="singleton"/>
+	<bean id="ventasBean" class="ar.com.magm.web.primefaces.VentasBean" scope="session"/>
+	<bean id="loginBean" class="ar.com.magm.web.primefaces.LoginBean" scope="session"/>
+</beans>

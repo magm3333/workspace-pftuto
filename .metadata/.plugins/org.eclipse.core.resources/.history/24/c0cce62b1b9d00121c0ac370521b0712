@@ -1,0 +1,9 @@
+package ar.com.magm.beans.dao.hibernateimpl;
+
+import ar.com.magm.beans.Profesor;
+import ar.com.magm.beans.dao.ProfesorDAO;
+import ar.com.magm.persistencia.dao.hibernateimpl.GenericDAOImplHibernate;
+
+public class ProfesorDAOImplHibernate extends GenericDAOImplHibernate<Profesor,Integer> implements  ProfesorDAO {
+
+}

@@ -37,15 +37,19 @@ public class Venta implements Serializable {
 	public int getAnio() {
 		return anio;
 	}
+
 	public String getCliente() {
 		return cliente;
 	}
+
 	public int getMes() {
 		return mes;
 	}
+
 	public String getMesLetra() {
 		return mesLetra;
 	}
+
 	public double getVenta() {
 		return venta;
 	}

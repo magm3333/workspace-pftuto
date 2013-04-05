@@ -9,24 +9,31 @@ public class Cliente {
 	public String getCliente() {
 		return cliente;
 	}
+
 	public int getIdCliente() {
 		return idCliente;
 	}
+
 	public Zona getZona() {
 		return zona;
 	}
+
 	public boolean isCuentaHabilitada() {
 		return cuentaHabilitada;
 	}
+
 	public void setCliente(String cliente) {
 		this.cliente = cliente;
 	}
+
 	public void setCuentaHabilitada(boolean cuentaHabilitada) {
 		this.cuentaHabilitada = cuentaHabilitada;
 	}
+
 	public void setIdCliente(int idCliente) {
 		this.idCliente = idCliente;
 	}
+
 	public void setZona(Zona zona) {
 		this.zona = zona;
 	}

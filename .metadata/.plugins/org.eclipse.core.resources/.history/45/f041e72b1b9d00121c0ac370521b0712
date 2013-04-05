@@ -1,0 +1,10 @@
+package ar.com.magm.beans.dao.hibernateimpl;
+
+import ar.com.magm.beans.Usuario;
+import ar.com.magm.beans.dao.UsuarioDAO;
+import ar.com.magm.persistencia.dao.hibernateimpl.GenericDAOImplHibernate;
+
+public class UsuarioDAOImplHibernate extends
+		GenericDAOImplHibernate<Usuario, Integer> implements UsuarioDAO {
+
+}

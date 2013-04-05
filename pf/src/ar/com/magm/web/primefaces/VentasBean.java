@@ -20,7 +20,7 @@ public class VentasBean implements Serializable {
 
 	private static final long serialVersionUID = -6690574219803425728L;
 
-	private String[] meses ;
+	private String[] meses;
 
 	private String sql = "SELECT year(fecha) as anio, month(fecha) as mes, zona, cliente, sum(importe*cantidad) as ventas FROM dw_ventasfact v INNER JOIN clientes c ON v.idCliente=c.idCliente INNER JOIN zonas z ON z.idZona=c.idZona WHERE cliente like ? GROUP BY zona, cliente, anio, mes ORDER BY anio,mes,zona,cliente";
 	private List<Venta> ventas;
@@ -32,12 +32,12 @@ public class VentasBean implements Serializable {
 	public VentasBean() {
 		jsfCtx = FacesContext.getCurrentInstance();
 		bundle = jsfCtx.getApplication().getResourceBundle(jsfCtx, "msg");
-		
+
 		// processList(null);
 	}
 
 	public SelectItem[] getMesesOptions() {
-		meses=bundle.getString("lbl.months").split(",");
+		meses = bundle.getString("lbl.months").split(",");
 		SelectItem[] r = new SelectItem[13];
 		r[0] = new SelectItem("", bundle.getString("lbl.all.m"));
 		for (int t = 0; t < meses.length; t++)
@@ -73,7 +73,7 @@ public class VentasBean implements Serializable {
 	}
 
 	private void processList(Object args[]) {
-		meses=bundle.getString("lbl.months").split(",");
+		meses = bundle.getString("lbl.months").split(",");
 		ventas = new ArrayList<Venta>();
 		zonas = new ArrayList<String>();
 		ServletContext sc = (ServletContext) FacesContext.getCurrentInstance()

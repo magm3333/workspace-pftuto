@@ -5,9 +5,19 @@
 <fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Locale"/>
-<fullyQualifiedTypeName name="java.util.Enumeration"/>
 <fullyQualifiedTypeName name="java.util.ResourceBundle"/>
 <fullyQualifiedTypeName name="org.hibernate.service.ServiceRegistry"/>
 <fullyQualifiedTypeName name="org.hibernate.cfg.Configuration"/>
 <fullyQualifiedTypeName name="org.hibernate.Session"/>
+<fullyQualifiedTypeName name="ar.com.magm.persistencia.dao.GenericDAO"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="ar.com.magm.model.dao.controller.ClienteTestController"/>
+<fullyQualifiedTypeName name="java.util.Enumeration"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.support.RequestContext"/>
+<fullyQualifiedTypeName name="org.springframework.web.context.request.RequestContextHolder"/>
+<fullyQualifiedTypeName name="org.springframework.web.context.request.RequestAttributes"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Scope"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
 </qualifiedTypeNameHistroy>

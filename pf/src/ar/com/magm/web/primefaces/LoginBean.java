@@ -62,19 +62,20 @@ public class LoginBean implements Serializable {
 
 	public void login(ActionEvent actionEvent) {
 		RequestContext context = RequestContext.getCurrentInstance();
-		
 
-		FacesContext jsfCtx= FacesContext.getCurrentInstance();
-		ResourceBundle bundle = jsfCtx.getApplication().getResourceBundle(jsfCtx, "msg");
-		
+		FacesContext jsfCtx = FacesContext.getCurrentInstance();
+		ResourceBundle bundle = jsfCtx.getApplication().getResourceBundle(
+				jsfCtx, "msg");
+
 		FacesMessage msg = null;
 		if (usuarioValido(nombre, clave)) {
 			logeado = true;
-			msg = new FacesMessage(FacesMessage.SEVERITY_INFO, bundle.getString("lbl.welcome"),
-					nombre);
+			msg = new FacesMessage(FacesMessage.SEVERITY_INFO,
+					bundle.getString("lbl.welcome"), nombre);
 		} else {
 			logeado = false;
-			msg = new FacesMessage(FacesMessage.SEVERITY_WARN, bundle.getString("lbl.error.login"),
+			msg = new FacesMessage(FacesMessage.SEVERITY_WARN,
+					bundle.getString("lbl.error.login"),
 					bundle.getString("lbl.invalidcredentials"));
 		}
 

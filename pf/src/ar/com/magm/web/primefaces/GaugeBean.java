@@ -8,7 +8,6 @@ import org.primefaces.model.chart.MeterGaugeChartModel;
 
 public class GaugeBean implements Serializable {
 
-
 	private static final long serialVersionUID = 2450103589061529330L;
 	private MeterGaugeChartModel meterGaugeModel;
 

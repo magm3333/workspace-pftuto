@@ -1,0 +1,7 @@
+package ar.com.magm.persistencia.dao;
+
+import ar.com.magm.model.Cliente;
+
+public interface ZonaDAO extends GenericDAO<Cliente, Integer> {
+
+}

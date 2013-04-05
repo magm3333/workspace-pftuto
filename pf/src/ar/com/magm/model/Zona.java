@@ -7,12 +7,15 @@ public class Zona {
 	public int getIdZona() {
 		return idZona;
 	}
+
 	public String getZona() {
 		return zona;
 	}
+
 	public void setIdZona(int idZona) {
 		this.idZona = idZona;
 	}
+
 	public void setZona(String zona) {
 		this.zona = zona;
 	}

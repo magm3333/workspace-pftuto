@@ -1,0 +1,10 @@
+package ar.com.magm.model.dao.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import ar.com.magm.persistencia.dao.ClienteDAO;
+
+public class ClienteTestController {
+	@Autowired
+	private ClienteDAO clienterDAO;
+}

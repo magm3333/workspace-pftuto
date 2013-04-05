@@ -1,0 +1,36 @@
+package ar.com.magm.web.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.web.context.request.RequestAttributes;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+
+import ar.com.magm.model.dao.controller.ClienteTestController;
+
+@WebServlet("/TestHibernateConSpring")
+public class TestHibernateConSpring extends HttpServlet {
+
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+
+		ClienteTestController controller = (ClienteTestController) RequestContextHolder
+				.getRequestAttributes().getAttribute("clienteController",
+						RequestAttributes.SCOPE_REQUEST);
+		
+
+		Object a=RequestContextHolder
+		.getRequestAttributes().getAttribute("org.springframework.web.context.request.RequestContextListener.REQUEST_ATTRIBUTES",
+				RequestAttributes.SCOPE_REQUEST);
+		System.out.println(a);
+		
+		controller.processRequest(request, response);
+	}
+
+}

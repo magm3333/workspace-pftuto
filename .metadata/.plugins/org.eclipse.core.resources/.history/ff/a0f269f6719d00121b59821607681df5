@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmlns:viewpoint="http://www.obeo.fr/dsl/viewpoint/1.1.0" xsi:schemaLocation="http://www.obeo.fr/dsl/viewpoint/description/1.1.0 http://www.obeo.fr/dsl/viewpoint/1.1.0#//description" xmi:id="_LatDAJ1xEeKQ7dPhYQaDQQ" selectedViews="_LtussJ1xEeKQ7dPhYQaDQQ _MADy0J1xEeKQ7dPhYQaDQQ">
+  <models xmi:type="uml:Model" href="src/dao.uml#_LY9WkJ1xEeKQ7dPhYQaDQQ"/>
+  <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_LtussJ1xEeKQ7dPhYQaDQQ" initialized="true">
+    <ownedRepresentations xmi:type="viewpoint:DSemanticDiagram" xmi:id="_L6OQkJ1xEeKQ7dPhYQaDQQ" name="NewModel Package Hierarchy">
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_L6f9YJ1xEeKQ7dPhYQaDQQ" source="GMF_DIAGRAMS">
+        <data xmi:type="notation:Diagram" xmi:id="_L6f9YZ1xEeKQ7dPhYQaDQQ" type="Viewpoint" element="_L6OQkJ1xEeKQ7dPhYQaDQQ" measurementUnit="Pixel">
+          <styles xmi:type="notation:DiagramStyle" xmi:id="_L6f9Yp1xEeKQ7dPhYQaDQQ"/>
+        </data>
+      </ownedAnnotationEntries>
+      <description xmi:type="description:DiagramDescription" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='UML%20Structural%20Modeling']/@ownedRepresentations[name='Package%20Hierarchy']"/>
+      <filterVariableHistory xmi:type="viewpoint:FilterVariableHistory" xmi:id="_L6OQkZ1xEeKQ7dPhYQaDQQ"/>
+      <activatedLayers xmi:type="description:Layer" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='UML%20Structural%20Modeling']/@ownedRepresentations[name='Package%20Hierarchy']/@defaultLayer"/>
+      <activatedLayers xmi:type="description:OptionalLayer" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='UML%20Structural%20Modeling']/@ownedRepresentations[name='Package%20Hierarchy']/@optionalLayers[name='Comments']"/>
+      <target xmi:type="uml:Model" href="src/dao.uml#_LY9WkJ1xEeKQ7dPhYQaDQQ"/>
+    </ownedRepresentations>
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='UML%20Structural%20Modeling']"/>
+  </ownedViews>
+  <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_MADy0J1xEeKQ7dPhYQaDQQ" initialized="true">
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='UML%20Behavioral%20Modeling']"/>
+  </ownedViews>
+</viewpoint:DAnalysis>
