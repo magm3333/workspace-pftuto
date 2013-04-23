@@ -11,6 +11,7 @@
    
 	<bean class="ar.com.magm.persistencia.dao.hibernateimpl.ClienteDAOImplHibernate" />
 	<bean class="ar.com.magm.persistencia.dao.hibernateimpl.ZonaDAOImplHibernate" />
+	<bean class="ar.com.magm.persistencia.dao.hibernateimpl.UsuarioDAOImplHibernate" />
 
 	
 	<bean id="gaugeBean" class="ar.com.magm.web.primefaces.GaugeBean" scope="singleton"/>

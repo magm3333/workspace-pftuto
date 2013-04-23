@@ -14,9 +14,18 @@ import javax.faces.model.SelectItem;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpSession;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
 import ar.com.magm.model.Venta;
+import ar.com.magm.persistencia.hibernate.util.HibernateUtil;
 
 public class VentasBean implements Serializable {
+
+	protected final Log log = LogFactory.getLog(getClass());
 
 	private static final long serialVersionUID = -6690574219803425728L;
 
@@ -29,10 +38,12 @@ public class VentasBean implements Serializable {
 	private FacesContext jsfCtx;
 	private ResourceBundle bundle;
 
+	SessionFactory sessionFactory; 
+
 	public VentasBean() {
 		jsfCtx = FacesContext.getCurrentInstance();
 		bundle = jsfCtx.getApplication().getResourceBundle(jsfCtx, "msg");
-
+		sessionFactory = HibernateUtil.getSessionFactory();
 		// processList(null);
 	}
 
@@ -76,6 +87,26 @@ public class VentasBean implements Serializable {
 		meses = bundle.getString("lbl.months").split(",");
 		ventas = new ArrayList<Venta>();
 		zonas = new ArrayList<String>();
+		Session session = sessionFactory.getCurrentSession(); 
+		Query query = session.createSQLQuery(sql);
+		if (args != null) {
+			for (int t = 0; t < args.length; t++) {
+				query.setParameter(0, args[t]);
+			}
+		}
+		List<Object[]> vtaTmp = query.list();
+		for (Object[] vo : vtaTmp) {
+			Venta venta = new Venta(vo[2].toString(), vo[3].toString(),
+					Integer.parseInt(vo[0].toString()), Integer.parseInt(vo[1]
+							.toString()), meses[Integer.parseInt(vo[1]
+							.toString()) - 1], Double.parseDouble(vo[4]
+							.toString()));
+			ventas.add(venta);
+			if (!zonas.contains(venta.getZona()))
+				zonas.add(venta.getZona());
+		}
+
+		/*
 		ServletContext sc = (ServletContext) FacesContext.getCurrentInstance()
 				.getExternalContext().getContext();
 		Connection cn = (Connection) sc.getAttribute("datasource");
@@ -96,10 +127,11 @@ public class VentasBean implements Serializable {
 				if (!zonas.contains(zona))
 					zonas.add(zona);
 			}
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
+		*/
 	}
 
 	public void setVentasFiltradas(List<Venta> ventasFiltradas) {

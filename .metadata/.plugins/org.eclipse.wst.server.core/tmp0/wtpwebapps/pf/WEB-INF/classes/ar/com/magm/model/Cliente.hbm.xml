@@ -8,5 +8,7 @@
 
 		<many-to-one name="zona" class="ar.com.magm.model.Zona"
 			column="idZona"/>
+		<many-to-one name="usuario" class="ar.com.magm.model.Usuario"
+			column="idUsuario"/>
 	</class>
 </hibernate-mapping>

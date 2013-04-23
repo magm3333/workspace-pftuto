@@ -16,7 +16,7 @@ import javax.servlet.annotation.WebListener;
 import ar.com.magm.persistencia.hibernate.util.HibernateUtil;
 
 @WebListener()
-@WebFilter(urlPatterns = { "/TestHibernateConSpring" })
+@WebFilter(urlPatterns = { "/TestHibernateConSpring", "*.xhtml", "/InicializarCuentasClientes" }) 
 public class HibernateContextListenerAndFilter implements Filter,
 		ServletContextListener {
 

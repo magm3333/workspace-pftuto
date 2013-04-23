@@ -37,6 +37,7 @@ public class GenericDAOImplHibernate<T, ID extends Serializable> implements
 			throw new RuntimeException(ex);
 		}
 	}
+	
 
 	@Override
 	public void saveOrUpdate(T entity) throws BussinessException {

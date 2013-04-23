@@ -10,6 +10,7 @@
 		<property name="hibernate.hbm2ddl.auto">update</property>
 
 
+		<mapping resource="ar/com/magm/model/Usuario.hbm.xml" />
 		<mapping resource="ar/com/magm/model/Cliente.hbm.xml" />
 		<mapping resource="ar/com/magm/model/Zona.hbm.xml" />
 

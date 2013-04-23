@@ -7,7 +7,7 @@ import ar.com.magm.persistencia.exception.BussinessException;
 
 public interface GenericDAO<T, ID extends Serializable> {
 	T create() throws BussinessException;
-
+	
 	void saveOrUpdate(T entity) throws BussinessException;
 
 	T get(ID id) throws BussinessException;
